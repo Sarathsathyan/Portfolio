@@ -24,6 +24,7 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
 	<link rel="stylesheet" href="assets/css/dark-mode.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -114,7 +115,7 @@
 													</a>
 												</li>
 												<li>
-													<a href="#">
+													<a href="https://twitter.com/sarathsathyan16">
 														<i class="fab fa-twitter"></i>
 													</a>
 												</li>
@@ -124,11 +125,7 @@
 														<i class="fab fa-instagram"></i>
 													</a>
 												</li>
-												<li>
-													<a href="#">
-														<i class="fab fa-pinterest-p"></i>
-													</a>
-												</li>
+
 											</ul>
 										</div>
 
@@ -210,13 +207,13 @@
 
 
 													<li>
-														<span><label>Website:</label> <a href="#">www.mywebsite.com</a></span>
+														<span><label>Website:</label> <a href="https://sarathsathyan.github.io/Portfolio/">MyWebsite</a></span>
 													</li>
 													<li>
 														<span><label>Mail:</label> <a href="mailto:example@gmail.com">sarathsathyan98@gmail.com</a></span>
 													</li>
 													<li>
-														<span><label>Phone:</label> <a href="#">+91 807050590</a></span>
+														<span><label>Phone:</label> <a href="#">+91 8073050590</a></span>
 													</li>
 													<li>
 														<span><label>LinkedIn:</label> <a href="http://www.linkedin.com/in/sarath-sathyan-2238501a0">sarath-sathyan-2238501a0</a></span>
@@ -616,13 +613,13 @@
 									<div class="single-skill2 wow fadeInUp">
 										<div class="circle-progress" data-percent="70"></div> 
 										<h4 class="name">
-											Graphic Design
+											AWS
 										</h4>
 									</div>
 									<div class="single-skill2 wow fadeInUp">
-										<div class="circle-progress" data-percent="85"></div> 
+										<div class="circle-progress" data-percent="75"></div>
 										<h4 class="name">
-											Auto CAD
+											Machine Learning
 										</h4>
 									</div>
 								</div>
@@ -658,6 +655,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 			<!-- Resume Area End -->
@@ -724,6 +722,52 @@
 							</div>
 						</div>
 					</div>
+					<div class="row cAndm">
+						<div class="col-lg-6">
+							<div class="home-page-form">
+								<div class="contact-form">
+									<form id="submit-form" action="">
+										<div class="controls">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<input id="name" type="text" name="name" class="form-control" placeholder="Name*" required="required" data-error="Name is required.">
+														<div class="help-block with-errors"></div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<input id="email" type="email" name="email" class="form-control" placeholder="Email*" required="required" data-error="Valid email is required.">
+														<div class="help-block with-errors"></div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<input id="subject" type="text" name="subject" class="form-control" placeholder="Subject*" required="required" data-error="Subject is required.">
+														<div class="help-block with-errors"></div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<textarea id="message" name="message" class="form-control" placeholder="Message*" rows="7" required="required" data-error="Please,leave us a message."></textarea>
+														<div class="help-block with-errors"></div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<button type="submit" class="mybtn3 mybtn-bg"><span>Contact</span></button>
+												</div>
+											</div>
+										</div>
+									</form> <!-- End Contact From -->
+								</div>
+							</div>
+						</div>
+
+					</div>
 
 					</div>
 					<!--/.row-->
@@ -732,10 +776,29 @@
 			</div>
 			<!-- Contact Area End -->
 
+
 		</div>
 	</div>
 	<!-- Main Content Area End -->
+	<script>
+		$("#submit-form").submit((e)=>{
+			e.preventDefault()
+			$.ajax({
+				url:"https://script.google.com/macros/s/AKfycbz0sloDxHWgwPOGKMThwTvBYBO6bQl8ZiwFfStO/exec",
+				data:$("#submit-form").serialize(),
+				method:"post",
+				success:function (response){
+					alert("Thank you for your response")
+					// window.location.reload()
+					//window.location.href="https://google.com"
+				},
+				error:function (err){
+					alert("Something Error")
 
+				}
+			})
+		})
+	</script>
 
 
 
