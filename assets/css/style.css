@@ -2324,3 +2324,7 @@ textarea.form-control {
 }
 
 /*  Blog  Area End */
+
+.content{
+  min-height: 10rem;
+}
